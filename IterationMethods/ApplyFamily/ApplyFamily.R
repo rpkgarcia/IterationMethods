@@ -50,6 +50,9 @@ t <- microbenchmark::microbenchmark(loop1(mat),
                                     times = 100)
 boxplot(t$time~t$expr, ylim = c(0, 21870000))
 
+boxplot(t)
+autoplot(t)
+
 i39 <- sapply(3:9, seq) # list of vectors
 sapply(i39, fivenum)
 vapply(i39, fivenum,
